@@ -1,0 +1,8 @@
+main:
+	andi x1,x1,0	#x1清零作为判断值
+	addi x4,x3,0	#复制
+	add x3,x3,x3	#x3+x3->x3
+	bge x4,x1,8	#x4>0则跳过下一步
+	addi x3,x3,1	#x3++
+	addi x2,x2,-1	#x2--旋转量计数器
+	bge x2,x1,-20	#x2>0循环
